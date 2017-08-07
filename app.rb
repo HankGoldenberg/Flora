@@ -15,10 +15,10 @@ end
 
 post '/email' do
 
-	from = Email.new(email: params[:sender] )
+	from = Email.new(email: "test@test.com" )
 	to = Email.new(email: 'Hank.j.goldenberg@gmail.com')
 	subject = params[:subject]
-	content = Content.new(type: 'text/plain', value: params[:message])
+	content = Content.new(type: 'text/plain', value: "This is the content")
 	mail = Mail.new(from, subject, to, content)
 
 	sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
@@ -28,7 +28,7 @@ post '/email' do
 	puts response.headers
 
 
-redirect '/success'
+# redirect '/success'
 
 end
 
