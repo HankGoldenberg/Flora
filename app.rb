@@ -1,4 +1,9 @@
+require 'sendgrid-ruby'
 require 'sinatra'
+include SendGrid
+
+	
+
 
 get '/' do 
 	erb :index
@@ -9,5 +14,24 @@ get '/contact' do
 end
 
 post '/email' do
-	"Title is #{params[:title]}, and message is: #{params[:message]}"
+
+	from = Email.new(email: params[:sender] )
+	to = Email.new(email: 'Hank.j.goldenberg@gmail.com')
+	subject = params[:subject]
+	content = Content.new(type: 'text/plain', value: params[:message])
+	mail = Mail.new(from, subject, to, content)
+
+	sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+	response = sg.client.mail._('send').post(request_body: mail.to_json)
+	puts response.status_code
+	puts response.body
+	puts response.headers
+
+
+redirect '/success'
+
+end
+
+get '/success' do
+	erb :success
 end
