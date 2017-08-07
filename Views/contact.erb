@@ -2,11 +2,11 @@
 	<html>
 		<head>
 			<title></title>
-			<link rel="stylesheet" type="text/css" href="../css/contact.css">
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+			<link rel="stylesheet" type="text/css" href="../css/contact.css">
 		</head>
 		<body>
-		<h1 style = "text-align: center;">Contact Page</h1>
+		<h1 id = "one" style = "text-align: center;">Contact Page</h1>
 
 			<div class="container">
 				<form class="well form-horizontal" action="/email" method="post"  id="contact_form">
@@ -50,6 +50,16 @@
 				  </div>
 				</div>
 
+				<div class="form-group">
+				  <label class="col-md-4 control-label">Subject</label>  
+				    <div class="col-md-4 inputGroupContainer">
+				    <div class="input-group">
+				        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+				  <input name="subject" placeholder="E-Mail Address" class="form-control"  type="text">
+				    </div>
+				  </div>
+				</div>
+
 
 				<!-- Text input-->
 				       
@@ -57,8 +67,8 @@
 				  <label class="col-md-4 control-label">Message</label>  
 				    <div class="col-md-4 inputGroupContainer">
 				    <div class="input-group">
-				        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-				  <input name="message" placeholder="(845)555-1212" class="form-control" type="textarea">
+				        <span class="input-group-addon"><i class="glyphicon glyphicon-leaf"></i></span>
+				  <textarea name="message" placeholder="Message" class="form-control" type="textarea"></textarea>
 				    </div>
 				  </div>
 				</div>
@@ -74,8 +84,9 @@
 				</fieldset>
 				</form>
 			</div>
-    		
-    		<script src = "../js/contact.js" type="text/javascript"></script>
+    		<script src = "../js/contact.js">
+    			
+    		</script>
 		</body>
 	</html>
 
