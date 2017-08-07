@@ -14,7 +14,6 @@ get '/contact' do
 end
 
 post '/email' do
-
 	from = Email.new(email: "test@test.com" )
 	to = Email.new(email: 'Hank.j.goldenberg@gmail.com')
 	subject = params[:subject]
@@ -27,9 +26,7 @@ post '/email' do
 	puts response.body
 	puts response.headers
 
-
 # redirect '/success'
-
 end
 
 get '/success' do
