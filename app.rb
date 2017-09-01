@@ -14,7 +14,10 @@ get '/contact' do
 end
 
 post '/email' do
-	from = Email.new(email: params[:email], name: "#{params[:first_name]} #{params[:last_name]}")
+	@first_name = params[:first_name]
+	@last_name = params[:last_name]
+	@email = params[:email]
+	from = Email.new(email: @email, name: "#{@first_name} #{@last_name}")
 	to = Email.new(email: 'venaswb@gmail.com')
 	subject = params[:subject]
 	content = Content.new(type: 'text/plain', value: params[:message])
