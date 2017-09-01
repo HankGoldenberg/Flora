@@ -15,7 +15,7 @@ end
 
 post '/email' do
 	from = Email.new(email: params[:email], name: "#{params[:first_name]} #{params[:last_name]}")
-	to = Email.new(email: 'Hank.j.goldenberg@gmail.com')
+	to = Email.new(email: 'venaswb@gmail.com')
 	subject = params[:subject]
 	content = Content.new(type: 'text/plain', value: params[:message])
 	mail = Mail.new(from, subject, to, content)

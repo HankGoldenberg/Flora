@@ -1,5 +1,6 @@
 body{
-	background-color:#00CED1;
+	background-color: #F0F8FF;
+
 }
 .h1{
 	text-align: center;
@@ -17,13 +18,27 @@ body{
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-	border-radius: 10px;
+	border-radius: 50%;
 }
 .par1{
 	column-count: 2;
 	column-gap: 40px;
 	column-rule:1px solid red;
 	padding:10px;
+}
+.div2{
+	float:right;
+}
+.right{
+	float:right;
+
+}
+
+.imgcirlce{
+	width: 500px;
+	height: 300px;
+	border-radius: 50%;
+
 }
 
 
