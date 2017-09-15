@@ -17,6 +17,10 @@ get '/about' do
 	erb :about
 end
 
+get '/services' do
+	erb :services
+end
+
 post '/email' do
 	@first_name = params[:first_name]
 	@last_name = params[:last_name]

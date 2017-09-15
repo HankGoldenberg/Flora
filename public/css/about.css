@@ -1,5 +1,5 @@
 body{
-	background-color: #F0F8FF;
+	background-color:#F0FFFF;
 
 }
 .h1{
@@ -11,14 +11,13 @@ body{
 
 }
 .image{
-	width: 1200px;
+	width: 700px;
 	height: 400px;
 	border: 1px;
 	padding: 10px;
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-	border-radius: 50%;
 }
 .par1{
 	column-count: 2;
@@ -33,13 +32,7 @@ body{
 	float:right;
 
 }
-
-.imgcirlce{
-	width: 500px;
-	height: 300px;
-	border-radius: 50%;
-
+.right{
+	font-size: 40px;
+	color: red;
 }
-
-
-
